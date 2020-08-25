@@ -15,9 +15,9 @@
 
 using namespace std;
 
-/*
- Input will be in the form
- 
+
+// Input will be in the form
+ /*
  char1 encoding1
  char2 encoding2
  ...
@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
     cleanupBinaryTree(root);
     
 }
-
+///Replicate the placement of a character in a binary tree using its corresponding bit pattern from the encoded file.
 void addNode(CharacterNode* &root, string bitpattern, const char character)
 {
     CharacterNode* currptr = root;
@@ -136,6 +136,7 @@ void addNode(CharacterNode* &root, string bitpattern, const char character)
     
 }
 
+///Useful for debugging by printing the binary tree representation given root pointer
 void printLetter(CharacterNode* root, string code)
 {
     if (root==nullptr)
@@ -150,6 +151,7 @@ void printLetter(CharacterNode* root, string code)
     
 }
 
+///Delete binary tree from the heap
 void cleanupBinaryTree(CharacterNode* root)
 {
     if (root == nullptr)
@@ -160,6 +162,9 @@ void cleanupBinaryTree(CharacterNode* root)
     return;
 }
 
+/**
+ Processes a single encoded byte and appends it to a string that contains the decoding. This function should be used in a while loop since it continuously keeps track of the traversal pointer.
+ */
 void processByte(string& output, const char byte, CharacterNode* &currptr, CharacterNode* root, int remainder)
 {
     char basemask = 1;
@@ -167,7 +172,7 @@ void processByte(string& output, const char byte, CharacterNode* &currptr, Chara
     {
         char mask = basemask<<i;
         char masked = byte & mask;
-        masked = (masked >> i)&0b00000001;
+        masked = (masked >> i)&0b1; //cute star wars joke
         switch(masked)
         {
             case 1: currptr = currptr->m_right;  break;
