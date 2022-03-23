@@ -1,4 +1,4 @@
-<h1> Huffman decoding! </h1>
+<h1> Huffman decoder </h1>
 
 
 Your compressed file, say `compressedfilename.dat` must be in the format of `output.dat` file from [my Huffman Encoder project](https://github.com/AbhishekMarda/HuffmanEncoder).
