@@ -1,17 +1,16 @@
 <h1> Huffman decoding! </h1>
 
-You can either clone this repository if you are using Xcode, or you can create a C++ project from the C++ files. 
 
 Your compressed file, say `compressedfilename.dat` must be in the format of `output.dat` file from [my Huffman Encoder project](https://github.com/AbhishekMarda/HuffmanEncoder).
 
 To run from terminal, do the following steps:
 
-1. Go to the target folder of your project with the executable file.
+1. Go to project direcotry and run `make` to create the executable
 
-2. Put compressedfilename.dat in that folder.
+2. Put compressedfilename.dat in the directory of the executable
 
-3. Using terminal in the folder that contains the target file, run `./huffmanencoder compressedfilename.dat yourfavoriteoutputfilename`
+3. Using terminal in the folder that contains the target file, run `./decoder compressedfilename.dat outputfile`
 
-4. The code will create an `yourfavoriteoutputfilename.txt` file which will be the uncompressed version for the file.
+4. The code will create an `outputfile.txt` file which will be the uncompressed version for the file.
 
-I hope you enjoy reading my code and playing around with the decocoder :)
+5. To cleanup executable run `make clean`
